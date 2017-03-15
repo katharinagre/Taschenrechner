@@ -33,7 +33,7 @@
         tools:layout_editor_absoluteY="101dp" />
 
     <TextView
-        android:id="@+id/Überschrift"
+        android:id="@+id/Ueberschrift"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Geben Sie hier ihre Zahlen ein, die Sie dividieren möchten:"
