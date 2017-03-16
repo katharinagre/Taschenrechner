@@ -10,11 +10,12 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     TextView Ergebnis, Ueberschrift;
     EditText Zahl1, Zahl2;
-    Button berechnen;
+    Button berechnen, leeren;
 
     double ergebnisBerechnung;
     double zahlEins;
     double zahlZwei;
+    double leerendesfeldes;
 
 
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Zahl2 = (EditText)findViewById(R.id.zahl2);
 
         berechnen = (Button)findViewById(R.id.berechnen);
+        leeren = (Button)findViewById(R.id.leeren);
 
         berechnen.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -38,7 +40,26 @@ public class MainActivity extends AppCompatActivity {
                 ergebnisBerechnung = zahlEins / zahlZwei;
                 Ergebnis.setText(String.valueOf(ergebnisBerechnung));
 
+
             }}
 
-            );}
-}
+
+        );
+
+        leeren.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Ergebnis.setText("Ergebnis");
+                Zahl1.setText("");
+                Zahl2.setText("");
+            }
+
+        } );}
+
+
+
+    };
+
+
+
